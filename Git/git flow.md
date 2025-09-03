@@ -23,34 +23,34 @@
 
 ## main(master) 브랜치
 
-- 출시 버전의 안정 코드 모음
+- 출시 버전의 안정 코드 모이는 브랜치이다.
 - 한 번 생성하면 계속 사용
 - 원칙: main에서는 직접 작업하지 않음. release/* 또는 hotfix/*를 PR로만 반영
 - 태깅: vMAJOR.MINOR.PATCH 형태로 main에 태그 후 배포
 
 ## develop 브랜치
 
-- 통합 개발 브랜치. 각 feature/* 결과가 모임
+- 통합 개발 브랜치. 각 feature/* 결과가 모이는 브랜치이다
 - 초기 1회 main에서 분기
 - 일반적으로 release/*를 통해 main으로 반영
 
 ## feature 브랜치
 
-- 단일 기능 개발용
+- 단일 기능으로 나누는 브랜치이다.
 - develop에서 분기 → 완료 시 develop에 PR 머지 → 브랜치 삭제
 
 ## release 브랜치
 
-- 출시 전 최종 점검(QA), 버전업, 체인지로그 정리
+- 출시 전 최종 점검(QA), 버전업, 체인지로그 정리하는 브랜치이다.
 - develop에서 릴리스에 포함할 기능이 고정된 시점에 분기
 - 완료 시 main에 머지하고 태그, 동일 변경을 develop에도 머지 후 삭제
 
 ## hotfix 브랜치
 
-- 출시 후 프로덕션 긴급 버그 대응
+- 출시 후 프로덕션 긴급 버그를 고치는 브랜치이다.
 - main에서 분기 → 수정 → main에 머지하고 태그 → develop에도 역머지 → 삭제
 - 일반 버그는 feature/* 또는 bugfix/*로 처리해 다음 릴리스에 포함
 
 ## Git Flow 이외 다른 전략들
 
-팀과 제품 특성에 따라 GitHub Flow, GitLab Flow, Trunk-Based Development 등을 사용할 수 있음
+팀과 제품 특성에 따라 GitHub Flow, GitLab Flow, Trunk-Based Development 등을 사용할 수 있다.
